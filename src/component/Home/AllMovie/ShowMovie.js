@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import './ShowMovie.css'
 
 const ShowMovie = (props) => {
-    const { show, score } = props.movie;
+    const { show } = props.movie;
 
     // console.log(show.image.medium)
     const navigate = useNavigate();
