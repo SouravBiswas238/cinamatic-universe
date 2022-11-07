@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Button, Modal } from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
 
 const MovieDetails = () => {
     const { id } = useParams();
@@ -8,8 +10,11 @@ const MovieDetails = () => {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
     const [movieDetails, setMovieDetails] = useState({})
+
+    const [user] = useAuthState(auth)
+
+    console.log(user);
 
     useEffect(() => {
         fetch(`https://api.tvmaze.com/shows/${id}`)
@@ -22,14 +27,13 @@ const MovieDetails = () => {
 
     return (
         <div >
-            <div className='row m-0'>
-                <div className='col'>
+            <div className='row m-0 p-2'>
+                <div className='col p-2'>
 
-                    <img className='img-fluid' src={movieDetails?.image?.original} alt="bike-img" />
+                    <img className='img-fluid rounded' src={movieDetails?.image?.original} alt="bike-img" />
                 </div>
 
-
-                <div className='col'>
+                <div className='col p-2'>
                     <div>
 
                         <p className="fs-5 pt-1 m-1"> <span className='fs-4 fw-semibold'>{movieDetails?.name} </span>
@@ -43,6 +47,8 @@ const MovieDetails = () => {
                         <p className="fs-6  m-1 "> <span className='fs-5'>Average Genres:  </span> {movieDetails?.genres}
                         </p>
                         <p className="fs-6  m-1 "> <span className='fs-5'>Average Genres:  </span> {movieDetails?.url}
+                        </p>
+                        <p className="fs-6  m-1 ">   <a href={movieDetails?.officialSite} target="_" className="btn-sm btn-secondary"> Official Website</a>
                         </p>
 
 
@@ -76,17 +82,17 @@ const MovieDetails = () => {
                 <Modal.Body>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text">Name</span>
-                        <input type="text" ></input>
+                        <input type="text" class="form-control" placeholder={user?.displayName} ></input>
 
                     </div>
                     <div class="input-group input-group-sm mb-3">
-                        <span class="input-group-text" >Email</span>
-                        <input type="email" className='outline-none'></input>
+                        <span class="input-group-text " >Email</span>
+                        <input type="email" class="form-control" placeholder={user?.email}></input>
 
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing-sm">Date</span>
-                        <input type="date" name="" id="" />
+                        <input type="date" class="form-control" name="" id="" />
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <span className='btn'>Pay</span>
@@ -95,9 +101,9 @@ const MovieDetails = () => {
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
-                        Close
+                        Exit
                     </Button>
-                    <Button variant="primary">Save</Button>
+                    <Button variant="primary">Confirm</Button>
                 </Modal.Footer>
             </Modal>
 

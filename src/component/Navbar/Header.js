@@ -31,15 +31,12 @@ const Header = () => {
                     {/* this is right part of navbar  */}
                     <Nav>
                         <Nav.Item className='text-white'>
+
                             {
                                 user ? <Nav.Link onClick={handelSignOut} eventKey="link-1" className='text-white'>Log Out</Nav.Link> : <Nav.Link className='text-white' eventKey=" link-1" as={Link} to="/login">Log In</Nav.Link>
                             }
 
                         </Nav.Item>
-
-
-
-
                     </Nav>
                 </Navbar.Collapse>
             </Container>

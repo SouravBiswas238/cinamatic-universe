@@ -29,7 +29,9 @@
 }
 
 .all-movies {
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding-top: 5px;
 }
 
 .sl-section-tabs ul {
