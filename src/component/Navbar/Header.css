@@ -1,0 +1,9 @@
+.my-logo {
+    display: inline-block;
+}
+
+.my-logo img {
+    width: 60px;
+    height: 50px;
+    color: white;
+}

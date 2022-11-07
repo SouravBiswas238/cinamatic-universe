@@ -1,0 +1,30 @@
+.continue-google-button {
+    /* margin: 35px; */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.row-or-box {
+    display: flex;
+    width: 415px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.row-or-box span {
+    margin: 5px 20px;
+}
+
+.row-border-box {
+    width: 150px;
+    height: 1px;
+    background: rgba(19, 19, 19, 0.305);
+}
+
+
+@media only screen and (max-width: 600px) {
+    .w-sm-100 {
+        width: 100% !important;
+    }
+}

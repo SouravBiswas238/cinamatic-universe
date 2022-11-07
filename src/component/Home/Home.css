@@ -1,0 +1,72 @@
+.home-banner {
+    height: 100%;
+    width: 100%;
+}
+
+.banner-img {
+    height: 100%;
+    width: 100%;
+}
+
+.headline {
+    display: inline;
+    color: #212121;
+    letter-spacing: 4px;
+    line-height: 20px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ffc107;
+}
+
+.sl-section {
+    width: 90%;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.sl-section-title {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.all-movies {
+    border: 1px solid red;
+}
+
+.sl-section-tabs ul {
+    width: 422px;
+    margin: 0 auto;
+    margin-bottom: 48px;
+    overflow: hidden;
+    display: flex;
+}
+
+.sl-section-tabs ul li.ui-tabs-active {
+    background: #fff;
+}
+
+.sl-section-tabs ul li {
+    float: left;
+    height: 40px;
+    background: #f5f5f5;
+    list-style: none;
+}
+
+.sl-section-tabs ul li.ui-tabs-active a {
+    color: #212121;
+    border-color: #e2e2e2;
+    text-decoration: none;
+}
+
+.sl-section-tabs ul li a {
+    display: block;
+    width: 209px;
+    height: 38px;
+    line-height: 38px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #bdbdbd;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    text-decoration: none;
+}
