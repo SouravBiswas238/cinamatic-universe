@@ -4,7 +4,7 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
-import logo from '../../img/Maxresdefault.png'
+import logo from '../../img/house-school-education-logo-design-260nw-1495957325.jpg'
 
 import './Header.css'
 
@@ -25,7 +25,7 @@ const Header = () => {
                 <Navbar.Collapse id="responsive-navbar-nav">
 
                     <Nav className="me-auto">
-                        <Nav.Link className='text-white' as={Link} to="/">Home</Nav.Link>
+                        <Nav.Link className='text-white' as={Link} to="/">Student Accomodation</Nav.Link>
 
                     </Nav>
                     {/* this is right part of navbar  */}

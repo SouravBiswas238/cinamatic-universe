@@ -21,6 +21,8 @@ const SingUp = () => {
     const navigate = useNavigate();
     const nameRef = useRef('');
     const emailRef = useRef('');
+    const phonRef = useRef('');
+    const batchRef = useRef('');
     const passwordRef = useRef('');
     const confirmPasswordRef = useRef('');
 
@@ -78,14 +80,28 @@ const SingUp = () => {
 
 
     return (
-        <div className='m-auto text-center p-4'>
+        <div className='m-auto w-50 text-center py-4 mt-4 my-shadow'>
 
             <Form onSubmit={handleCreateUser} className='w-50 w-sm-100  m-auto'>
                 <Form.Group as={Row} className="mb-3" controlId="formHorizontalNAme">
                     <Col>
-                        <Form.Control ref={nameRef} type="text" placeholder="Your Name" />
+                        <Form.Control ref={nameRef} type="text" placeholder=" First Name" />
+                    </Col>
+                    <Col>
+                        <Form.Control ref={nameRef} type="text" placeholder="Last name" />
                     </Col>
                 </Form.Group>
+                <Form.Group as={Row} className="mb-3" controlId="formHorizontalNAme">
+                    <Col>
+                        <Form.Control ref={batchRef} type="text" placeholder=" Batch" />
+                    </Col>
+                </Form.Group>
+                <Form.Group as={Row} className="mb-3" controlId="formHorizontalNAme">
+                    <Col>
+                        <Form.Control ref={phonRef} type="text" placeholder=" Mobile number" />
+                    </Col>
+                </Form.Group>
+
                 <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
 
                     <Col>

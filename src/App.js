@@ -1,11 +1,9 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './component/Home/Home';
-import MovieDetails from './component/Home/MovieDetails/MovieDetails';
 import Login from './component/Login/Login';
 import Header from './component/Navbar/Header';
 import NotFound from './component/NotFound/NotFound';
-import RequireAuth from './component/RequireAuth/RequireAuth';
 import SingUp from './component/SignUp/SignUp';
 
 function App() {
@@ -16,19 +14,7 @@ function App() {
         <Route path='/' element={<Home></Home>}> </Route>
 
 
-        {/* <Route path='/inventory'
-          element={
-            <RequreAuth>
-              <Inventory></Inventory>
-            </RequreAuth>
-          }></Route> */}
 
-        <Route path='/movie/:id'
-          element={
-            <RequireAuth>
-              <MovieDetails></MovieDetails>
-            </RequireAuth>
-          }></Route>
 
 
 

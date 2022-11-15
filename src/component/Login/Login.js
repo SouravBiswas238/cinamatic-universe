@@ -9,6 +9,7 @@ import Loading from '../Loading/Loading';
 import { sendPasswordResetEmail } from 'firebase/auth';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import home from '../../img/login.88cf6d20.webp'
 
 
 const Login = () => {
@@ -68,53 +69,63 @@ const Login = () => {
     }
 
     return (
-        <div className='m-auto text-center p-4'>
-
-            <Form onSubmit={handelSubmit} className='w-50 w-sm-100  m-auto'>
-                <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
-                    <Form.Label column sm={2}>
-                        Email
-                    </Form.Label>
-                    <Col sm={10}>
-                        <Form.Control ref={emailRef} type="email" placeholder="Email" required />
-                    </Col>
-                </Form.Group>
-                <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
-
-                    <Form.Label column sm={2}>
-                        Password
-                    </Form.Label>
-                    <Col sm={10}>
-                        <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
-                    </Col>
-                </Form.Group>
-                {errorElement}
-
-                <Form.Group className="mb-3">
-
-                    <Button type="submit" className='w-50  w-sm-100' >Log in</Button>
-
-                    <div className='row-or-box mt-3  w-sm-100'>
-                        <div className='row-border-box'></div>
-                        <span>or</span>
-                        <div className='row-border-box'></div>
-                    </div>
-                </Form.Group>
-                <ToastContainer />
-            </Form>
-            <p>New to Sourav Fitness <span role="button" className='text-primary pointer button' onClick={navigateRegister}>Please register</span></p>
-            <p>Forget Password? <span role="button" className='text-primary pointer button' onClick={resetPassword}>Reset Password</span></p>
-
-
-            <div className='continue-google-button '>
-
-                <button className='w-25  w-sm-100'
-                    onClick={() => signInWithGoogle()}>
-
-                    <img src={googleIcon} alt="google-img" />
-                    <span className='ms-1'>Continue with Google</span>
-                </button>
+        <div className='row p-4'>
+            <div className='col-4 w-50'>
+                <img className='w-100' src={home} alt="" />
             </div>
+            <div className='col-8 w-50 my-shadow p-4'>
+                <Form onSubmit={handelSubmit} className='w-75 w-sm-100  m-auto'>
+                    <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
+                        <Form.Label column sm={2}>
+                            Email
+                        </Form.Label>
+                        <Col sm={10}>
+                            <Form.Control ref={emailRef} type="email" placeholder="Email" required />
+                        </Col>
+                    </Form.Group>
+                    <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
+
+                        <Form.Label column sm={2}>
+                            Password
+                        </Form.Label>
+                        <Col sm={10}>
+                            <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
+                        </Col>
+                    </Form.Group>
+                    {errorElement}
+
+                    <Form.Group className="mb-3 text-center">
+
+                        <Button type="submit" className='w-50  w-sm-100' >Log in</Button>
+
+                        <div className='row-or-box mt-3  w-sm-100'>
+                            <div className='row-border-box'></div>
+                            <span>or</span>
+                            <div className='row-border-box'></div>
+                        </div>
+                    </Form.Group>
+
+                    <ToastContainer />
+                </Form>
+                <div className='text-center'>
+
+                    <p>New to student Accomodation <span role="button" className='text-primary pointer button' onClick={navigateRegister}>Please register</span></p>
+                    <p>Forget Password? <span role="button" className='text-primary pointer button' onClick={resetPassword}>Reset Password</span></p>
+
+                </div>
+
+                <div className='continue-google-button '>
+
+                    <button className='w-50  w-sm-100'
+                        onClick={() => signInWithGoogle()}>
+
+                        <img src={googleIcon} alt="google-img" />
+                        <span className='ms-1'>Continue with Google</span>
+                    </button>
+                </div>
+            </div>
+
+
         </div >
     );
 };
