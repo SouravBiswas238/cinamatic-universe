@@ -8,15 +8,14 @@ import { getAuth } from "firebase/auth";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyAMjB5QUxbgYt8emHzUxhVsbKAdMxrBuzM",
-    authDomain: "cinema-unverse.firebaseapp.com",
-    projectId: "cinema-unverse",
-    storageBucket: "cinema-unverse.appspot.com",
-    messagingSenderId: "361253465201",
-    appId: "1:361253465201:web:0d68f3333482b2f55e7fd0",
-    measurementId: "G-60KSNVWDK7"
+    apiKey: "AIzaSyDqBFZxt4MRlmv0hF29OTVel7r-XyYDGLU",
+    authDomain: "student-accomodation-b5beb.firebaseapp.com",
+    projectId: "student-accomodation-b5beb",
+    storageBucket: "student-accomodation-b5beb.appspot.com",
+    messagingSenderId: "1010097090385",
+    appId: "1:1010097090385:web:e288ce0d31c3a2c746ed70",
+    measurementId: "G-LS4HPQT8K8"
 };
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);

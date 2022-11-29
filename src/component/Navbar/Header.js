@@ -19,7 +19,8 @@ const Header = () => {
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container className=''>
-                <Navbar.Brand as={Link} to="/" className='my-logo text-white'> <img className='rounded-circle' src={logo} alt="" /> </Navbar.Brand>
+                <Navbar.Brand as={Link} to="/" className='my-logo text-white'>
+                    <img className='rounded-circle' src={logo} alt="" /> </Navbar.Brand>
 
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
@@ -30,12 +31,13 @@ const Header = () => {
                     </Nav>
                     {/* this is right part of navbar  */}
                     <Nav>
+                        <Nav.Link as={Link} to="/dashboard" className='text-white'>Dashboard</Nav.Link>
+
                         <Nav.Item className='text-white'>
 
                             {
                                 user ? <Nav.Link onClick={handelSignOut} eventKey="link-1" className='text-white'>Log Out</Nav.Link> : <Nav.Link className='text-white' eventKey=" link-1" as={Link} to="/login">Log In</Nav.Link>
                             }
-
                         </Nav.Item>
                     </Nav>
                 </Navbar.Collapse>
