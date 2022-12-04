@@ -1,5 +1,6 @@
 import React from 'react';
 import hall from '../../img/hal.jpg'
+import Sidebar from '../sidebar/Sidebar';
 import './Home.css'
 
 const Home = () => {

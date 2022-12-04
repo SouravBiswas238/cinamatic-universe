@@ -96,7 +96,7 @@ const Login = () => {
 
                     <Form.Group className="mb-3 text-center">
 
-                        <Button type="submit" className='w-50  w-sm-100' >Log in</Button>
+                        <Button type="submit" className='w-50  w-sm-100 text-[#000]' >Log in</Button>
 
                         <div className='row-or-box mt-3  w-sm-100'>
                             <div className='row-border-box'></div>
@@ -116,7 +116,7 @@ const Login = () => {
 
                 <div className='continue-google-button '>
 
-                    <button className='w-50  w-sm-100'
+                    <button className='flex w-96 text-center justify-center relative left-[200px] top-5'
                         onClick={() => signInWithGoogle()}>
 
                         <img src={googleIcon} alt="google-img" />

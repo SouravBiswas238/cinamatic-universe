@@ -126,7 +126,7 @@ const SingUp = () => {
 
                 <Form.Group className="mb-3">
 
-                    <Button type="submit" className='w-50  w-sm-100' >Sign Up</Button>
+                    <Button type="submit" className='w-50  w-sm-100 text-[#000]' >Sign Up</Button>
 
                     <div className='row-or-box mt-3  w-sm-100'>
                         <div className='row-border-box'></div>
@@ -138,8 +138,8 @@ const SingUp = () => {
 
             <p>Already Have an account <span role="button" className='text-danger pointer button' onClick={navigateLogin}>Login</span></p>
 
-            <div className='continue-google-button '>
-                <button className='w-25  w-sm-100'
+            <div className='continue-google-button text-center'>
+                <button className='flex w-96 text-center justify-center relative left-[200px] top-5'
                     onClick={() => signInWithGoogle()}>
                     <img src={googleIcon} alt="google-img" />
                     <span className='ms-1'>Continue with Google</span>
